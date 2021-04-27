@@ -1,0 +1,37 @@
+## Assessment 2
+
+### R libraries to use:
+
+- `tidyverse`
+
+- `tidymodels`
+### Dataset
+
+https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data
+
+
+Tasks:
+
+See the definition of variables in a separate section “Data dictionary”
+
+--------
+
+#### Setup: 
+
+1. Create a separate R Project for the assignment and call it “Practical assignment”. Please store all your files there.
+
+2. Use the provided csv file to complete the tasks below. The file needs to be uploaded to your project. You can use the variable name of your choice.
+
+3.  For each question below record your answer in the Rmarkdown document that will show the question, your code and the results.
+
+-----------
+### Part 1: Data Wrangling and visualization (50 Marks)
+
+### Part 2: Data Modeling (50 Marks)
+
+
+#### Resources:
+
+RMarkdown tutorial https://rmarkdown.rstudio.com/lesson-1.html
+
+ggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org/
