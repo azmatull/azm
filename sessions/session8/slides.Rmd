@@ -23,16 +23,6 @@ theme_set(theme_plex())
 ```
 
 
-Lately I've been publishing [screencasts](https://juliasilge.com/category/tidymodels/) demonstrating how to use the [tidymodels](https://www.tidymodels.org/) framework, from first steps in modeling to how to evaluate complex models. Today's screencast is good for folks just getting started with tidymodels, using this week's [`#TidyTuesday` dataset](https://github.com/rfordatascience/tidytuesday) on penguins. `r emo::ji("penguin")`
-
-```{r, echo=FALSE}
-blogdown::shortcode("youtube", "z57i2GVcdww")
-```
-
-</br>
-
-Here is the code I used in the video, for those who prefer reading instead of or in addition to video.
-
 ## Explore the data
 
 This week's #TidyTuesday dataset is from [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/), observations of Antarctic penguins who live on the Palmer Archipelago. You can read more about how this dataset came to be in [this post on the RStudio Education blog](https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/). Our modeling goal here is to predict [the sex of the penguins](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-07-28/readme.md) using a classification model, based on other observations in the dataset.
