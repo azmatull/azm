@@ -1,9 +1,23 @@
+
 ---
-title: "6008: Unsupervised learning - Clustering"
-subtitle: "⚔<br/>Session 9"
-author: "Maria Prokofieva"
-date: "17/06/2021"
-output: html_document
+title: "Getting started with k-means and #TidyTuesday employment status"
+author: Julia Silge
+date: '2021-02-24'
+slug: kmeans-employment
+categories:
+  - rstats
+  - tidymodels
+tags:
+  - rstats
+  - tidymodels
+subtitle: ''
+summary: "Use tidy data principles to understand which kinds of occupations are most similar in terms of demographic characteristics."
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: true
+projects: []
 ---
 
 ```{r setup, include=FALSE}
@@ -16,6 +30,18 @@ library(tidyverse)
 library(silgelib)
 theme_set(theme_plex())
 ```
+
+
+This is the latest in my series of [screencasts](https://juliasilge.com/category/tidymodels/) demonstrating how to use the [tidymodels](https://www.tidymodels.org/) packages, from starting out with first modeling steps to tuning more complex models. Today's screencast uses the [broom](https://broom.tidymodels.org/) package to tidy output from k-means clustering, with this week's [`#TidyTuesday` dataset](https://github.com/rfordatascience/tidytuesday) on employment and demographics.
+
+
+```{r, echo=FALSE}
+blogdown::shortcode("youtube", "opHDQzhO5Fw")
+```
+
+</br>
+
+Here is the code I used in the video, for those who prefer reading instead of or in addition to video.
 
 ## Explore the data
 
@@ -118,6 +144,3 @@ ggplotly(p, height = 500)
 
 
 Remember that you can switch out the axes for `asian` or `black_or_african_american` to explore dimensions.
-
-
-
