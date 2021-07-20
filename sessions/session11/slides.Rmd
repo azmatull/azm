@@ -1,6 +1,6 @@
 ---
 title: "BCO6008: Model tuning and evaluation "
-author: "Maria Prokofieva"
+author: "From David Robinson"
 date: "17/06/2021"
 output: html_document
 ---
