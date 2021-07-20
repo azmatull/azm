@@ -1,22 +1,8 @@
----
-title: "6008: Unsupervised learning - clustering 2"
-subtitle: "⚔<br/>Session 10"
-author: "Dr Maria Prokofieva"
-date: "17/06/2021"
-output: html_document
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(echo = TRUE,   
-                      message = FALSE,
-                      warning = FALSE,
-                      fig.height = 4,
-                      fig.width = 8,
-                      fig.align = "center")
 ```
+From Julia Silge https://juliasilge.com/blog/health-care-indicators/
 
+# Health Care Indicators in Utah Counties
 
 The state of Utah (my adopted home) has an [Open Data Catalog](https://opendata.utah.gov/) with lots of interesting data sets, including a collection of [health care indicators from 2014 for the 29 counties in Utah](https://opendata.utah.gov/Health/Health-Care-Indicators-By-Counties-In-Utah-2014/qmsu-gki4). The observations for each county include measurements such as the infant mortality rate, the percent of people who don't have insurance, what percent of people have diabetes, and so forth. Let's see how these health care indicators are related to each other and if we can use these data to cluster Utah counties into similar groups.
 
