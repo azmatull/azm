@@ -1,6 +1,6 @@
 ---
 title: "Session 7: Multinomial classification with tidymodels and #TidyTuesday volcano eruptions"
-author: "Maria Prokofieva"
+author: "adopted from Julia silge "
 date: "17/06/2021"
 output: html_document
 ---
