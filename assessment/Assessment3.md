@@ -5,7 +5,7 @@ solve business problems.
 
 In a group of 2, you are required to investigate and present a timely, evidence-based analysis of an issue making the news.
 
-You can get ideas for your topic using (The Conversation)[https://theconversation.com/au/search] or (Kaggle active competitions)[https://www.kaggle.com/competitions]
+You can get ideas for your topic using [The Conversation](https://theconversation.com/au/search) or (Kaggle active competitions)[https://www.kaggle.com/competitions]
 
 You use the dataset to develop and evaluate models and develop a business case solution to address the identified questions and underlying problems.
 You are asked to present this solution to the management to present them with options to resolve the addressed business problem.
