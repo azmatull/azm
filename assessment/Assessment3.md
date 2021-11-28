@@ -5,7 +5,7 @@ solve business problems.
 
 In a group of 2, you are required to investigate and present a timely, evidence-based analysis of an issue making the news.
 
-You can get ideas for your topic using [The Conversation](https://theconversation.com/au/search) or (Kaggle active competitions)[https://www.kaggle.com/competitions]
+You can get ideas for your topic using [The Conversation](https://theconversation.com/au/search) or [Kaggle active competitions](https://www.kaggle.com/competitions)
 
 You use the dataset to develop and evaluate models and develop a business case solution to address the identified questions and underlying problems.
 You are asked to present this solution to the management to present them with options to resolve the addressed business problem.
@@ -29,23 +29,23 @@ Submit: a video presentation and `.ppt` file
 
 **List of resources to locate your dataset:**
 
-(2021 Kaggle Machine Learning & Data Science Survey)[https://www.kaggle.com/c/kaggle-survey-2021]
+[2021 Kaggle Machine Learning & Data Science Survey](https://www.kaggle.com/c/kaggle-survey-2021)
 
-(Wine reviews)[https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009]
+[Wine reviews](https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)
 
-(Yelp Dataset)[https://www.yelp.com/dataset] Use (this link)[https://www.tutorialspoint.com/r/r_json_files.htm] to upload your `.json` file
+[Yelp Dataset](https://www.yelp.com/dataset) Use [this link](https://www.tutorialspoint.com/r/r_json_files.htm) to upload your `.json` file
 
-(Goodreads-books)[https://www.kaggle.com/jealousleopard/goodreadsbooks]
+[Goodreads-books](https://www.kaggle.com/jealousleopard/goodreadsbooks)
 
-(Spotify)[https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks]
+[Spotify](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks)
 
-(Mall Customer Segmentation Data)[https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python]
+[Mall Customer Segmentation Data](https://www.kaggle.com/vjchoudhary7/customer-segmentation-tutorial-in-python)
 
-(Medical Appointment No Shows)[https://www.kaggle.com/joniarroba/noshowappointments]
+[Medical Appointment No Shows](https://www.kaggle.com/joniarroba/noshowappointments)
 
-(Used Cars)[https://www.kaggle.com/austinreese/craigslist-carstrucks-data]
+[Used Cars](https://www.kaggle.com/austinreese/craigslist-carstrucks-data)
 
-(Women's E-Commerce Clothing Reviews)[https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews]
+[Women's E-Commerce Clothing Reviews](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews)
 
-(Where it Pays to Attend College)[https://www.kaggle.com/wsj/college-salaries]
+[Where it Pays to Attend College](https://www.kaggle.com/wsj/college-salaries)
 
