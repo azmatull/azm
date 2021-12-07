@@ -1,13 +1,265 @@
-## Assessment 1
+## Assignment 1
 
-### Assessment 1.1
+Assignment 1 is connected with Assignment 2 and is based on the same dataset. You need to complete your assignment 1 first to be able to progress to Assignment 2.
 
-**Focus**: tidymodels, data preprocessing and setup, including data exploration and dataviz
+The assignment is based on an actual Kaggle competition **Sliced** 
 
-### Assessment 1.2
+You can review the data here https://www.kaggle.com/c/sliced-s01e05-WXx7h8/data
 
-**Focus**: tidymodels (regression and classification)
+The data consist of:
 
-### Assessment 1.3
+train.csv - the training set: training is understood in a broader content for developing and evaluating your model. This means that you still need to split this data into training and testing subset.
 
-**Focus**: network science and NLP
+test.csv - the test set: this data is for your submission. Once you prepare your model, you need to apply this to this data which is "new" for your submission
+
+sample_submission.csv - a sample submission file in the correct format
+
+---------
+
+### Part 1 - Complete within week 2.
+
+**Focus**: data wrangling, data visualization, data pre-processing
+
+1. Create a .rmd document with the title "Predicting Airbnb prices". Keep the output as html document and use your name and student id for the author.
+
+2. Load the required libraries, including `tidyverse`, `tidymodels`, `skimr`
+Make sure that all your R code for all the coding steps is included as R chunks
+
+
+```{R}
+
+```
+
+3. Read the dataset with `read_csv()` from "https://raw.githubusercontent.com/maria-pro/bco6008/main/train_airbnb.csv"
+
+Name the variable `data`
+
+4. Review the datatypes in the dataset using `skim()` function
+
+The task is to predict prices for rentals. 
+
+What are the variables that you think may be useful? 
+
+What are the variables which will use useless and you can get rid off?
+
+5. Split the dataset for ML with 75% for training and 25% for testing using `initial_split()`. You may name the training data set a `train` and testing as `test`
+
+Remember: for the next steps you are going to use the `train` dataset to do initial exploration of the data.
+
+6. Review the variables that were "useful"? Use `tidyverse` functions to explore them.
+
+Use https://ggplot2.tidyverse.org/ to visualize your exploration. 
+
+**Numerical variables**: 
+
+Do they vary or constant? 
+
+Are they any outliers?
+
+Missing values?
+
+`geom_boxplot()` and `geom_histogram()` are particularly useful 
+
+See https://ggplot2.tidyverse.org/reference/geom_boxplot.html and https://ggplot2.tidyverse.org/reference/geom_histogram.html
+
+**Categorical variables**:
+
+Do they have enough categories (or just one)?
+
+Are all categories equal (e.g. have the same number of data points - `count()`)?
+
+Should some categories be "merged" into *Other* (e.g. `fct_lump`)?
+
+Missing values?
+
+Remember to use `fct_reorder()` to make your visualizations more appealing.
+
+7 . Run following examples of data exploration and provide exploration of another 1 numerical and 1 categorical variable that you think may be useful for the task
+
+7.1
+
+Use `distinct()` to see how many unique locations the dataset covers (`name`)
+Use `count()` to see how many occurances for each unique location (`name`) the dataset has
+Use `count()` to see how many occurances for each unique `neighbourhood_group` the dataset has
+Use `count()` to see how many occurances for each unique `neighbourhood` the dataset has
+
+7.2 Use `ggplot()` with `geom_histogram()` to see the flactuation of the `price` - you will need to build a model that will predict it for your final submission in Assigment 2.
+
+7.3 Group the observations in the dataset on the `neighbourhood_group` with `group_by()` and use `summarise()` to calculate the average price `avr_price` variable as `mean(price)` and median price `median_price` variable as `median(price)` and number of observations for each group `n` as`n=n()`. 
+ 
+7.4  Use `arrange()` with desc(n) to see the results in the descrending order.
+
+7.5 Develop a graph that shows distribution of the `price` variable across `neighbourhood_group`. 
+Use `mutate` and `fct_reorder` to order the graph by `price`
+
+`mutate(neighbourhood_group=fct_reorder(neighbourhood_group, price)`
+
+for the `aes` use `exp(price)` and `neighbourhood_group`
+
+7.6  Use `geom_boxplot()` and `scale_x_log10`
+
+Write 1-2 sentences why we use exp() and why we use `scale_x_log10` in this case.
+
+Write a sentence on what insights you can get from the graph
+
+7.7 Use the above step to show distribution of the `price` variable across `neighbourhood`.
+
+Since we have MANY unique `neighbourhood`s we need to consider the top 40.
+
+Use `mutate` and `fct_lump` 
+
+`mutate(neighbourhood=fct_lump(neighbourhood, 40), 
+        neighbourhood=fct_reorder(neighbourhood, price))`
+
+Keep the rest of the previous step's code.
+
+Write a sentence on what insights you can get from the graph
+
+7.8 Use the above step 9 to develop a graph that shows distribution of `price` according to `room_type`
+
+Write a sentence on what insights you can get from the graph?
+
+7.9 Use `ggplot()` to dvelop a `geom_point()` graph that shows `reviews_per_month` as `x` and `price` as `y`
+
+Use `scale_x_log10()` and add `geom_smooth(method="lm")`.
+
+Write a sentence what value `geom_smooth(method="lm")` adds. What insights can you get from the graph?
+
+7.10 Use step 11 to develop a graph that shows the relationship between `calculated_host_listings_count` and `price`
+Write a sentence on what insights you can get from the graph.
+
+7.11 Use step 11 to develop a graph that shows the relationship between `availability_365` and `price`
+Write a sentence on what insights you can get from the graph.
+
+8. Save your document and pull-commit-push
+
+
+### Part 2 - Complete within week 2, latest session 5 week 3.
+
+**Focus**: preprocessing and modeling
+
+1. Create a map using the following instructions:
+
+We are using `ggmap` package and you can read about it here https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf 
+ 
+Install package `ggmap` using `install.packages("ggmap")` and load it using `library()` function
+
+Review the code below and try to understand each step:
+You may use this reference https://cran.r-project.org/web/packages/ggmap/ggmap.pdf
+
+`#set the bounding box for the map
+bbox <- c(left = -74.24285, bottom = 40.50641, right = -73.71690, top = 40.91306)
+
+nyc_map <- get_stamenmap(bbox, zoom = 11)
+aggregated_lat_lon <- train %>%
+  group_by(latitude = round(latitude, 2),
+           longitude = round(longitude, 2)) %>%
+  summarize(price = mean(price),
+            n = n()) %>%
+  filter(n >= 5)
+  `
+  
+Build a map using the following:
+Review the code below and try to understand each step:
+You may use this reference https://cran.r-project.org/web/packages/ggmap/ggmap.pdf
+
+`ggmap(nyc_map) +
+  geom_point(aes(longitude, latitude, size = n, color = exp(price) - 1),
+             data = aggregated_lat_lon) +
+  scale_color_gradient2(low = "blue", high = "red", midpoint = 2,
+                        trans = "log10", labels = dollar) +
+  scale_size_continuous(range = c(.5, 4)) +
+  theme_map() +
+  labs(color = "Price",
+       size = "# of listings")
+
+Explain in 2-3 sentences what this data map shows and how valuable it is for the prediction task
+
+2. Create a recipe `recipe_xg` to preprocess the data.
+
+In the recipe specify `price` as the response variable and the following variables as predictors
+
+`minimum_nights`
+
+`room_type`
+
+`number_of_reviews` 
+
+`latitude`
+
+`longitude`
+
+`neighbourhood_group`
+
+`reviews_per_month`
+
+`calculated_host_listings_count` 
+
+`availability_365`
+
+`last_review`
+ 
+ 
+ Use `train` data
+ 
+ For the steps in the recipe use:
+ 
+  - `step_mutate` where you createa new variable `is_manhattan` that equals `neighbourhood_group == "Manhattan"`
+  Write a sentence explaining what this steps does to your data
+  
+  
+  - `step_rm` for `neighbourhood_group`
+   Write a sentence explaining what this steps does to your data
+
+  - `step_mutate` where you createa new variable `last_review = coalesce(as.integer(Sys.Date() - last_review), 0)`
+   Write a sentence explaining what this steps does to your data
+
+  - `step_dummy` for `all_nominal_predictors()`
+    Write a sentence explaining what this steps does to your data
+    
+Use `prep()` as the final step in your recipe
+
+Use `juice()` to extract the data from your recipe and visualise `last_review` variable with `geom_histogram()`
+
+3. Create a second recipe `recipe_linear` with the following steps
+
+In the recipe specify `price` as the response variable and the following variables as predictors
+
+`room_type
+
+latitude
+
+longitude
+
+neighbourhood_group
+
+neighbourhood 
+
+host_id`
+
+ Use `train` data
+ 
+ For the steps in the recipe use:
+
+`step_mutate` to convert `host_id` to a factor 
+    Write a sentence explaining what this steps does to your data
+
+  For assignment 1 submission, you can use 
+    `step_other(host_id, neighbourhood)`
+    Please note that the default option for `threshold` will be used
+    https://recipes.tidymodels.org/reference/step_other.html 
+    
+    `threshold = 0.05` 
+
+**Note in Assignment 2 you will need to replace this step with `step_other(host_id, neighbourhood, threshold = tune())`**
+  
+  Read about `step_other()` function and `threshold` parameter at tidymodels.org. What do they do? How `tune()`function works?
+      Write a sentence explaining what this steps does to your data
+  
+ - `step_dummy` for `all_nominal_predictors()`
+    Write a sentence explaining what this steps does to your data
+    
+  - `step_normalize` for `all_predictors()`
+    Write a sentence explaining what this steps does to your data
+
+8. Save your document and pull-commit-push
