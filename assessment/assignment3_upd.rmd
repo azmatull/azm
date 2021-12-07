@@ -1,0 +1,95 @@
+#Assignment 3
+
+**Focus**: predictive analytics, data import, data exploration, data preparation (`recipes`), model development, model evaluation and comparison, presentation of results
+
+Milestones:
+
+**In week 1-2 confirm your dataset to use with your tutor**
+
+**In week 3 prepare your proposal with a draft of questions to be answered**
+
+**In Session 10, there will be peer review of the projects, where you will need to work with at least 1 another group and peer review their work. 
+
+1. Access your Github folder and accept your assignment. Clone your repository in your desktop RStudio. This is a *group* assignment, so please make sure that you observe `Github` workflow: Pull - Commit - Push sequence.
+
+2. Select your dataset and discuss it with your tutor. The dataset needs to be confirmed in week 2 for you to start working on it and completing your project in time.
+
+### Dataset
+
+You can use free datasets at
+
+- https://www.kaggle.com/datasets
+- https://github.com/rfordatascience/tidytuesday
+- https://data.gov.au/
+
+The dataset needs to be big enough (e.g. variables and observations) to allow predictive modeling. You will need to build at have:
+
+- classification
+
+- regression and 
+
+- clustering.
+
+** Only one group can work on each case**
+
+The dataset you choose should have numerical and categorical variables or you should be able to transform (=recode) some of the existing variables so that you can ultimately have both numerical and categorical variables to work with. This is for your models.
+
+It is also very **important** that your dataset has enough variables to allows for two distinct questions to be asked and answered using a not-completely-overlapping set of variables, i.e., Question 1 requires the use of variables `a`, `b`, and `c` and Question 2 requires the use of variables `e`, `f`, `z`, and `c` or z, a, and b. Some shared variables are ok.
+
+3. Your task for the project is to come up with three questions to answer. Each question will be linked to a model you build. 
+
+Each question should involve more than two variables to build a model. 
+
+### Proposal
+
+In week 2-3 you need to discuss your proposed submission with your tutor. 
+
+Prepare your proposal as a separate document - this is optional, but will allow you to review it critically as you prepare your plan. 
+
+Your proposal can include:
+
+- a brief description of your dataset: observations/variables, relevance to you, reasons to choose
+
+- proposed questions you want to answer.
+
+- a plan for answering each question, including the variables involved, variables to be created (if any), external data to be merged in (if any).
+
+4. Build your models you complete all the steps in data analysis, including data import, data exploration, data preparation, model development, evaluation. 
+
+5. Prepare your write-up (code+discussion) in the business report (.rmd) and present your findings in the class presentation (.ppt + recorded video).
+
+Your business report is written in the `.rmd` document and has a structure of the business report. It should include your method and findings.
+
+Peer evaluattion in **session 10** should provide you with feedback that it to be implemented in the final submission.
+
+### Peer review
+
+Each team reviews the proposals of at least one other team. 
+
+The peer review is completed in session 10 in class. 
+
+**Reviewer**: Teams develop the review discussing among all team members. The feedback is submitted as an `issue` on the project repo. To do so, go to the Issues tab, click on the green New issue button on the top right, and then click on the green Get started button for the issue template titled Peer review.
+
+This will start a new issue with a peer review form that you can fill out.
+
+Update the introductory paragraph with your team name and the names of the team members participating in the review. 
+
+Answer each question in the spaces provided underneath them. You’re expected to be thorough, critical and constructive in your review. Your goal is to help the team whose project you’re reviewing. 
+
+You should be critical, but respectful in your review. Also remember that you will be evaluated on the quality of your review. **Do a good job!**
+
+**Reviewee**: When you receive feedback from your peers, you need to address it. 
+
+You need to update your submission (.rmd) - you can do these updates all in one commit or multiple commits. 
+
+In the last commit that addresses the peer review comments, use a keyword in your commit message that will close the peer review issues. 
+
+These words are `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`, `resolves`, and `resolved` and they need to be followed by the issue number (which you can find next to the issue title). So, your commit message can say something like `Finished updates based on peer review, fixes #1`.
+
+6. Submission: 
+
+Select your group representative to submit your **business report** and in the allocated dropbox on VU Collaborate. 
+
+Submit a zip copy of your assignment, as well as a copy of the link to your Github repository to the allocated dropbox on VU Collaborate using Submission template opens in new window
+
+**Website** Go to your GitHub repository and convert it to a website using `GitHub Pages`. Please use https://docs.github.com/en/pages/quickstart (from Step 3)
