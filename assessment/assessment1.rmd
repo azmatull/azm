@@ -115,20 +115,20 @@ Keep the rest of the previous step's code.
 
 Write a sentence on what insights you can get from the graph
 
-7.8 Use the above step 9 to develop a graph that shows distribution of `price` according to `room_type`
+7.8 Use the above step to develop a graph that shows distribution of `price` according to `room_type`
 
 Write a sentence on what insights you can get from the graph?
 
-7.9 Use `ggplot()` to dvelop a `geom_point()` graph that shows `reviews_per_month` as `x` and `price` as `y`
+7.9 Use `ggplot()` to develop a `geom_point()` graph that shows `reviews_per_month` as `x` and `price` as `y`
 
 Use `scale_x_log10()` and add `geom_smooth(method="lm")`.
 
 Write a sentence what value `geom_smooth(method="lm")` adds. What insights can you get from the graph?
 
-7.10 Use step 11 to develop a graph that shows the relationship between `calculated_host_listings_count` and `price`
+7.10 Use the above step to develop a graph that shows the relationship between `calculated_host_listings_count` and `price`
 Write a sentence on what insights you can get from the graph.
 
-7.11 Use step 11 to develop a graph that shows the relationship between `availability_365` and `price`
+7.11 Use the above  step to develop a graph that shows the relationship between `availability_365` and `price`
 Write a sentence on what insights you can get from the graph.
 
 8. Save your document and pull-commit-push
@@ -139,6 +139,8 @@ Write a sentence on what insights you can get from the graph.
 **Focus**: preprocessing and modeling
 
 1. Create a map using the following instructions:
+
+Please make sure you install package "ggthemes" https://cran.r-project.org/web/packages/ggthemes/index.html
 
 We are using `ggmap` package and you can read about it here https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf 
  
