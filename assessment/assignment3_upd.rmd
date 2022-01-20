@@ -90,6 +90,8 @@ These words are `close`, `closes`, `closed`, `fix`, `fixes`, `fixed`, `resolve`,
 
 Select your group representative to submit your **business report** and in the allocated dropbox on VU Collaborate. 
 
-Submit a zip copy of your assignment, as well as a copy of the link to your Github repository to the allocated dropbox on VU Collaborate using Submission template opens in new window
+Submit a zip copy of your assignment, as well as a copy of the link to your Github repository to the allocated dropbox on VU Collaborate using Submission template opens in new window.
+
+**Dataset** Do not upload your dataset to VU Collaborate. Your code must load data from the URL (not from the local directory). Normally, the datasets already have public URLs which you can use in `read_csv()` function. If not, then you will need to create a new, public repository in github and upload your dataset there. 
 
 **Website** Go to your GitHub repository and convert it to a website using `GitHub Pages`. Please use https://docs.github.com/en/pages/quickstart (from Step 3)
